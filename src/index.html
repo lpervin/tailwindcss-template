@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Basic HTML/Tailwind starter</title>
+    <meta name="description" content="Basic HTML/Tailwind Templates" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/fontawesome-free/css/all.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+  <body>
+    <div x-data="{ open: false }">
+        <header class="bg-indigo-50 min-w-full">
+            <a href="#" x-on:click="open = ! open"> <i class="fa-solid fa-bars fa-xl text-black-100"
+                :class="open ? 'fa-angles-left' : 'fa-bars'"
+                ></i>     </a>  
+         
+            <!-- <a href="#"> <i class="fa-solid fa-angles-right fa-xl text-black-100"></i> <strong x-text="open"></strong> </a>   -->
+        </header>
+        <div class="main-container">
+            <nav :class="open ? '' : 'collapsed'">
+                <div x-show="open"> Nav here </div>
+                <div x-show="!open"> Icons </div>
+            </nav>
+            <div class="main-content">
+                <div class="content-block">
+                    <div class="content-block-right bg-blue-200">
+                        <button><i class="fas fa-heart"></i> Like</button>    
+                    </div>
+                    <div class="content-block-main bg-blue-100">1</div>
+                    
+                </div>
+                <!-- <div class="content-block">
+                    <div class="content-block-main bg-blue-100">3</div>
+                    <div class="content-block-right bg-blue-200">4</div>
+                </div>
+                <div class="content-block">
+                    <div class="content-block-main bg-blue-100">3</div>
+                    <div class="content-block-right bg-blue-200">4</div>
+                </div>
+    
+                <div class="content-block">
+                    <div class="content-block-main bg-blue-100">3</div>
+                    <div class="content-block-right bg-blue-200">4</div>
+                </div>
+                  -->
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>
