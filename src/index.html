@@ -11,15 +11,15 @@
   </head>
   <body>
     <div x-data="{ open: false }">
-        <header class="bg-indigo-50 min-w-full">
-            <a href="#" x-on:click="open = ! open"> <i class="fa-solid fa-bars fa-xl text-black-100"
+        <header class=" min-w-full">
+            <a href="#" x-on:click="open = ! open"> <i class="fa-solid fa-bars fa-xl text-white"
                 :class="open ? 'fa-angles-left' : 'fa-bars'"
                 ></i>     </a>  
          
             <!-- <a href="#"> <i class="fa-solid fa-angles-right fa-xl text-black-100"></i> <strong x-text="open"></strong> </a>   -->
         </header>
         <div class="main-container">
-            <nav :class="open ? '' : 'collapsed'">
+            <nav :class="open ? '' : 'collapsed'" class="hidden sm:flex">
                 <div x-show="open"> Nav here </div>
                 <div x-show="!open"> Icons </div>
             </nav>
