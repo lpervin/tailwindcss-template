@@ -15,13 +15,13 @@ header {
     background: #3d68ff;    
     padding: 15px;
     position: fixed; 
-    border-bottom: 0.1em solid rgb(54, 25, 25);
+    border-bottom: 0.1em solid #0737e4;   
     box-shadow: 0 0 4px 0 rgb(7, 0, 0), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
     z-index: 1;
 
 }
 
-nav {
+nav.bg-sidebar {
     /* background-color: rgb(0, 157, 255); */
     border-right: 0.1em solid rgb(199, 195, 195);
     border-bottom: 0.1em solid rgb(199, 195, 195);
@@ -30,18 +30,44 @@ nav {
     height: 100%;    
     padding-right: 10px;
     padding-left: 10px;
-    min-width: 95px;
-    flex-basis: 1;
+    min-width: 125px;
+    /* flex-basis: 1; */
     transition: min-width 0.2s ease;
 }
 /*bg-sidebar*/
 nav.collapsed {
     min-width: 47px;
-    flex-basis: 1;
-    transition: min-width 0.7s ease;
-   
+    /* flex-basis: 1; */
+    transition: min-width 0.7s ease; 
+    visibility:visible;
 }
 
+.upgrade-btn { background: #1947ee; }
+.upgrade-btn:hover { background: #0038fd; }
+.active-nav-link { 
+    /* background: #1947ee;  */
+    /* border-right: 5px solid #1947ee; */
+    /* padding-right: 15px; */
+}
+.nav-item:hover { 
+      /* border-right: 5px solid #1947ee; */
+    /* padding-right: 15px; */
+ }
+.account-link:hover { background: #3d68ff; }
+
+.nav-container {
+    padding-top: 25px;
+    /* border: 1px solid black; */
+    min-width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nav-bottom{
+    padding-bottom: 25px;
+   
+}
 .main-container {
     position: relative;
     top: 55px;
@@ -50,7 +76,14 @@ nav.collapsed {
     height: 94vh;
         background-color:#e4e4e7;
         
-    /* border-bottom: 1px solid black; */
+        
+    border-bottom: 1px solid black;
+}
+
+@media only screen and (max-width: 639px) {
+    .main-container {
+        top: 75px;
+    }
 }
 
 .main-content{
